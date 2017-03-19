@@ -5,13 +5,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gmrender-resurrect
-PKG_VERSION:=2016-05-28
+PKG_VERSION:=2017-01-29
 PKG_RELEASE=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/hzeller/gmrender-resurrect.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=48caaa4f6c386fd1586126c801cd326f96d5fa5c
+PKG_SOURCE_VERSION:=4d0e5ad56aed605bc12632db2df44cef80bfd29c
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 
 PKG_FIXUP:=autoreconf
@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/nls.mk
 define Package/gmrender-resurrect
   SECTION:=respeaker
   CATEGORY:=ReSpeaker
-  DEPENDS:= +gstreamer1 +glib2 +libupnp
+  DEPENDS:= +gstreamer1 +libgstreamer1 +glib2 +libupnp
   TITLE:=A Headless UPnP Renderer
 endef
 
